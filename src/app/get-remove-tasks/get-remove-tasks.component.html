@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-12" *ngIf="tasks.length > 0">
+    <ul id="myUL">
+      <li
+        *ngFor="let t of tasks"
+        [class.complate]="check"
+      >
+        {{ t.name }}
+        <button (click)="removetask(t)" style="float: right" class="close">
+          x
+        </button>
+      </li>
+    </ul>
+    <button class="col-8 addBtn mt-3 float-right" (click)="complateTask()">Complate List</button>
+  </div>
+  <div class="col-12" style="color: whitesmoke;" *ngIf="tasks.length === 0">No Tasks Added Yet</div>
+</div>

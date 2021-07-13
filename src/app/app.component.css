@@ -1,7 +1,10 @@
 body {
     margin: 0;
     min-width: 250px;
-  }
+    color: #555;
+    background-color: #435a5e;
+    height: 100vh;
+}
   
   /* Include the padding and border in an element's total width and height */
   * {
@@ -85,7 +88,7 @@ body {
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
-    border-radius: 0;
+    border: none;
   }
   
   .addBtn:hover {
@@ -104,3 +107,10 @@ body {
     background-color: #63baca;
     color: white;
   }
+
+  .complate{
+  -webkit-text-decoration-line: line-through; /* Safari */
+   text-decoration-line: line-through; 
+   color: #bbb;
+  }
+

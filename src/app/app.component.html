@@ -1,22 +1,11 @@
+<body>
 <div class="container">
-<div class="header">
+  <div class="header">
     <h2 style="margin:5px" [textContent]='title'></h2>
-    <input type="text" id="myInput" placeholder="Write a new task"  #newTask>
-    <button class="addBtn" (click)="addtask(newTask.value); newTask.value=''">Add</button>
+    <p [textContent]='description'></p>
+    <app-add-task></app-add-task>
+  </div>
+  <app-get-remove-tasks></app-get-remove-tasks>
 </div>
+</body>
 
-<div class="row">
-<div class="col-12" *ngIf="tasks.length > 0">
-<ul id="myUL">
-    <li *ngFor="let t of tasks"> 
-      {{t}}
-      <button (click)="removetask(t)" style="float:right;" class="close"> x </button>
-    </li>
-</ul>
-</div>
-
-<div class="col-12" *ngIf="tasks.length === 0" >
- No Tasks Added Yet
-</div>
-</div>
-</div>
